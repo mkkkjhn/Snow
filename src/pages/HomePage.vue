@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <!--  -->
+    <!-- Intro block start -->
+    <!--  -->
     <div class="intro">
       <div class="intro__bg"></div>
       <div class="intro__content">
@@ -17,21 +20,85 @@
         </div>
       </div>
     </div>
+    <!--  -->
+    <!-- Intro block finish -->
+    <!--  -->
+    <!--  -->
+    <!-- About block start -->
+    <!--  -->
     <div class="about">
       <div class="container">
         <titled-paragraph title="About Our Agency" text="We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter."></titled-paragraph>
         <img alt="sign" class="about__sign" src="../assets/images/about/about__sign.png">
       </div>
+      <div class="about__summary">
+        <div class="container">
+          <div class="about__row">
+            <div class="about__column">
+              <div class="about__icon">
+                <img alt="icon" src="../assets/images/about/portfolio.svg">
+              </div>
+              <div class="about__column-inner">
+                <div class="about__counter">548</div>
+                <div class="about__text">PROJECTS COMPLETED</div>
+              </div>
+            </div>
+            <div class="about__column">
+              <div class="about__icon">
+                <img alt="icon" src="../assets/images/about/clock.svg">
+              </div>
+              <div class="about__column-inner">
+                <div class="about__counter">1465</div>
+                <div class="about__text">WORKING HOURS</div>
+              </div>
+            </div>
+            <div class="about__column">
+              <div class="about__icon">
+                <img alt="icon" src="../assets/images/about/star.svg">
+              </div>
+              <div class="about__column-inner">
+                <div class="about__counter">612</div>
+                <div class="about__text">POSITIVE FEEDBACKS</div>
+              </div>
+            </div>
+            <div class="about__column">
+              <div class="about__icon">
+                <img alt="icon" src="../assets/images/about/like.svg">
+              </div>
+              <div class="about__column-inner">
+                <div class="about__counter">735</div>
+                <div class="about__text">HAPPY CLIENTS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--  -->
+    <!-- About block finish -->
+    <!--  -->
+    <!--  -->
+    <!-- Projects block start -->
+    <!--  -->
+    <div class="projects">
+      <div class="container">
+        <titled-paragraph title="Best Projects" text="Donec orci sem, pretium ac dolor et, faucibus faucibus mauris. Etiam,pellentesque faucibus. Vestibulum gravida volutpat ipsum non ultrices."></titled-paragraph>
+      </div>
+      <this-portfolio></this-portfolio>
+    </div>
+    <!--  -->
+    <!-- Projects block finish -->
+    <!--  -->
   </div>
 </template>
 
 <script>
 import titledParagraph from '@/components/titledParagraph'
+import ThisPortfolio from '@/components/ThisPortfolio'
 export default {
   name: 'HomePage',
   components: {
-    titledParagraph
+    titledParagraph, ThisPortfolio
   }
 }
 </script>
@@ -99,9 +166,36 @@ export default {
 }
 .about {
   &__sign {
-    margin-left: 40%;
+    margin-left: calc(50% - 83px);
     padding-bottom: 26px;
     margin-bottom: 80px;
+  }
+  &__summary {
+    background-image: url("../assets/images/about/bg-pattern.jpg");
+  }
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0;
+  }
+  &__column {
+    display: flex;
+    font-weight: 500;
+    color: #ffffff;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__icon {
+    padding: 0 12px;
+  }
+  &__counter {
+    font-size: 1.25rem;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: .97rem;
   }
 }
 </style>

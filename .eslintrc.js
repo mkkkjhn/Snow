@@ -1,3 +1,4 @@
+// const ThisPortfolio = require('@/components/ThisPortfolio')
 module.exports = {
   root: true,
   env: {
@@ -14,4 +15,12 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
+  // overrides: [
+  //   {
+  //     files: [ThisPortfolio],
+  //     reules: {
+  //       'no-unused-expressions': 'off'
+  //     }
+  //   }
+  // ]
 }
