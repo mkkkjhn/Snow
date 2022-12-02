@@ -56,6 +56,7 @@ body {
   font-family: Work Sans,sans-serif;
   color: #5f5f5f;
   line-height: 1.65;
+  letter-spacing: .004em;
 }
 a {
   cursor: pointer;
